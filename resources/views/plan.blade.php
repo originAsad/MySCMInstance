@@ -1,7 +1,6 @@
 @extends('layouts.app')
 
 @section('content')
-
     <div class="container">
         <div class="row">
             <div class="col-md-8 col-md-offset-2 col-sm-12 col-sm-offset-0">
@@ -30,8 +29,7 @@
 
                             </div>
                             <div class="panel-footer text-left">
-                                <form action="{{ route('subscribe') }}" method="POST" id="payment-form"
-                                data-cc-on-file="false">
+                                <form action="{{ route('subscribe') }}" method="POST" id="payment-form">
                                     {{ csrf_field() }}
 
                                     <h3 class="text-center">
@@ -82,8 +80,8 @@
             </div>
         </div>
     </div>
-    <script src="https://code.jquery.com/jquery-2.2.4.min.js" 
-    integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44=" crossorigin="anonymous"></script>
+
+    <script src="https://code.jquery.com/jquery-2.2.4.min.js" integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44=" crossorigin="anonymous"></script>
     <script type="text/javascript" src="https://js.stripe.com/v2/"></script>
     <script type="text/javascript">
 
@@ -126,5 +124,4 @@
             }
         };
     </script>
-    
 @endsection

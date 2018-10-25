@@ -34,8 +34,6 @@ class PlanController extends Controller
               'stripeToken' => 'required',
               'plan' => 'required'
             ]);
-
-            \Stripe\Stripe::setApiKey ( 'sk_test_INJvZWiP2ctnB2tzWvUwB1jo' );
         // User chosen plan
         $pickedPlan = $request->get('plan');
         // Current logged in user

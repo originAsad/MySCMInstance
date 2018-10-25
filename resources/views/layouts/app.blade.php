@@ -21,7 +21,15 @@
     
 	<script src='https://js.stripe.com/v1/' type='text/javascript'></script>
 	<script src='https://js.stripe.com/v2/' type='text/javascript'></script>
-    <script src="https://checkout.stripe.com/checkout.js"></script>
+	
+	<script src="https://checkout.stripe.com/checkout.js"></script>
+     <!-- Scripts -->
+     <script>
+        window.Laravel = <?php echo json_encode([
+            'csrfToken' => csrf_token(),
+        ]); ?>
+    </script>
+
 
 </head>
 <body>
